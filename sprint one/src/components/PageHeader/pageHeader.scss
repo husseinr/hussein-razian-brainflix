@@ -1,4 +1,60 @@
-.main-header {
-    color: green;
-    background-color: lightblue;
+@import '../../styles/partials/common-styles';
+.nav {
+    @include avenirDemi;
+    padding: 2% 5%;
+
+    @include tablet {
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    @include desktop {
+
+    }
+
+    &__logo {
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        width:50%;
+    }
+
+    &__search-button {
+        width:83%;
+        margin-top:8px;
+        background-image: url(../../assets/Icons/SVG/Icon-search.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position:left;
+        height: 50px;
+        padding-left: 20px;
+        border-radius:5px;
+        border: 1.5px solid grey;
+        background-color:  #FAFAFA;
+    }
+
+    &__user {
+        margin-top: 8px;
+        margin-bottom: 16px;
+
+        &-upload {
+            width: 68%;
+            height:50px;
+            border: 0;
+            border-radius:5px;
+            color: white;
+            background-color:#0095ff;
+            vertical-align: top;
+            margin-right: 16px;
+            font-size: 16px;
+        }
+    
+        &-photo {
+            border-radius:50%;
+            height:45px;
+            width: 45px;
+        }
+
+    }
 }

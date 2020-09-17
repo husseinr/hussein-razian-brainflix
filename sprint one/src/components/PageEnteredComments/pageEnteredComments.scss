@@ -1,0 +1,45 @@
+@import '../../styles/partials/common-styles';
+
+.comment-entries {
+    padding: 0 5%;
+
+    &__card {
+        border-bottom: $form-section-color solid 1px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-photo {
+            background-color: $form-section-color;
+            border-radius:50%;
+            height: 45px;
+            width: 45px;
+            margin-top: 0.5em;
+        }
+
+        &-content {
+            width: 82%;
+    
+
+            &-info {
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+    
+                &-name {
+                    @include avenirDemi;
+                }
+    
+                &-date {
+                    color: $form-section-color;
+                    @include avenirReg;
+                }
+            }
+
+            &-comment {
+                @include avenirReg;
+                width: 90%;
+            }
+        }
+    }
+}

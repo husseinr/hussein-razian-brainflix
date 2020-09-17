@@ -1,12 +1,18 @@
 import React from 'react';
-import PageNav from './components/PageNav/PageNav';
-import PageVideo from './components/PageVideo/PageVideo';
+import PageHeader from './components/PageHeader/PageHeader';
+import PageHero from './components/PageHero/PageHero';
+import PageCommentsForm from './components/PageCommentsForm/PageCommentsForm';
+import CommentsDisplayed from './components/PageEnteredComments/PageEnteredComments';
+import PageNextVideo from './components/PageNextVideo/PageNextVideo';
 
 function App() {
   return (
     <div className="App">
-      <PageNav />
-      <PageVideo />
+      <PageHeader />
+      <PageHero />
+      <PageCommentsForm />
+      <CommentsDisplayed />
+      <PageNextVideo />
     </div>
   );
 }

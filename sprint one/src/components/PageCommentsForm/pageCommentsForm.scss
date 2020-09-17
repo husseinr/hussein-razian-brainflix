@@ -1,0 +1,30 @@
+@import '../../styles/partials/common-styles';
+
+.comments {
+    @include avenirReg;
+    &__header {
+
+    }
+
+    &__form {
+        &-user-image {
+            height:45px;
+            width: 45px;
+            border-radius: 50%;
+        }
+
+        &-comment-label {
+
+        }
+
+        &-comment-field {
+
+        }
+
+        &-button {
+
+        }
+    }
+    }
+
+  
