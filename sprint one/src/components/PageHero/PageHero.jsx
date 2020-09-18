@@ -8,6 +8,7 @@ import LikesIcon from '../../assets/Icons/SVG/Icon-likes.svg'
 import './pageHero.scss';
 
 
+
 const PageHero = () => {
     return (
         <section className="content">
@@ -17,7 +18,7 @@ const PageHero = () => {
 
             <div className="content__icons">
                 <div className="content__icons-play" >
-                    <img src={PlayButton} alt="play-button"></img>
+                    <img  className="content__icons-play-button" src={PlayButton} alt="play-button"></img>
                 </div>
 
                 <div className="content__icons-scrubber">
@@ -26,9 +27,9 @@ const PageHero = () => {
                     </div>
                 </div>
 
-                <div className="content__icons-volume">
-                    <img  src={FullScreen} alt="full-screen-button"></img>
-                    <img  src={VolumeButton} alt="volume-button"></img>
+                <div className="content__icons-options">
+                    <img className="content__icons-options-button content__icons-options-button-full " src={FullScreen} alt="full-screen-button"></img>
+                    <img className="content__icons-options-button content__icons-options-button-volume" src={VolumeButton} alt="volume-button"></img>
                 </div>
             </div>
 
@@ -40,12 +41,12 @@ const PageHero = () => {
 
             <div className="content__stats">
                 <div className="content__stats-item">
-                    <img  src={ViewIcon} alt="view-icon"></img>
+                    <img className="content__stats-item-icon"  src={ViewIcon} alt="view-icon"></img>
                     <p>1,001,023</p>
                 </div>
 
                 <div className="content__stats-item">
-                    <img  src={LikesIcon} alt="likes-icon"></img>
+                    <img className="content__stats-item-icon"  src={LikesIcon} alt="likes-icon"></img>
                     <p>110,985</p>
                 </div>
             </div>

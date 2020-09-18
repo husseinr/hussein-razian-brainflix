@@ -9,10 +9,18 @@ function App() {
   return (
     <div className="App">
       <PageHeader />
-      <PageHero />
-      <PageCommentsForm />
-      <CommentsDisplayed />
-      <PageNextVideo />
+      <main>
+        <PageHero />
+        <PageCommentsForm />
+        <section className="comment-entries">
+          <CommentsDisplayed />
+        </section>
+        <section className="next">
+          <h3 className="next__title">NEXT VIDEO</h3>
+          <PageNextVideo />
+        </section>
+       
+      </main>
     </div>
   );
 }
