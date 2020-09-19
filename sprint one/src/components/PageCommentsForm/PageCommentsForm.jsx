@@ -2,7 +2,6 @@ import React from 'react';
 import './pageCommentsForm.scss';
 import UserLogo from '../../assets/Images/Mohan-muruge.jpg'
 
-
 const PageCommentsForm = () => {
 
     return (
