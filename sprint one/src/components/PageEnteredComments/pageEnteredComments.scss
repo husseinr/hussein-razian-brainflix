@@ -10,14 +10,18 @@
     }
 
     @include desktop {
-        width: 88%;
-        padding-left: 13%;
+        width: 78%;
+        padding-left: 22%;
         padding-right: 0;
     }
 
     &__card {
         @include commonFlex(none,row,none);
         border-top: $form-section-color solid 1px;
+
+        // @include desktop {
+        //     width: 50%;
+        // }
 
         &-photo {
             background-color: $form-section-color;

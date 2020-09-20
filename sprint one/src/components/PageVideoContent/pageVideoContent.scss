@@ -14,7 +14,8 @@
         }
 
         @include desktop {
-            padding:0 13%;
+            padding-left: 22%;
+            padding-right: 0;
         }
     }
 
@@ -29,7 +30,7 @@
         }
 
         @include desktop {
-            padding-left: 13%;
+            padding-left: 22%;
             padding-right: 0;
         }
 
@@ -102,8 +103,8 @@
         }
 
         @include desktop {
-            width: 68%;
-            padding-left: 13%;
+            width: 70%;
+            padding-left: 22%;
             padding-right: 0;
         } 
     }

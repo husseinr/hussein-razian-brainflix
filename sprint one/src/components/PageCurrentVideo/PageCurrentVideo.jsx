@@ -7,8 +7,8 @@ import VolumeButton from '../../assets/Icons/SVG/Icon-volume.svg'
 function PageCurrentVideo (props) {
     return (
         <section className="video">
-            <div className="video__displayed">
-                <video className="video__displayed-poster" poster={props.videoPoster}>
+            <div className="video__displayed" key ={props.currentVideo.id}>
+                <video className="video__displayed-poster" poster={props.currentVideo.image}>
                 
                 </video>
             
@@ -21,7 +21,7 @@ function PageCurrentVideo (props) {
                         <div className="video__bar-scrubber-progress">
                 
                         </div>
-                        <p className="video__bar-scrubber-time"> 0:00/0:42</p>
+                        <p className="video__bar-scrubber-time">{props.currentVideo.duration}</p>
                     </div>
 
                     <div className="video__bar-options">

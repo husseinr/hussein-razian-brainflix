@@ -12,7 +12,7 @@ import PageHeader from './components/PageHeader/PageHeader';
 import PageCurrentVideo from './components/PageCurrentVideo/PageCurrentVideo'
 import PageVideoContent from './components/PageVideoContent/PageVideoContent';
 import PageCommentsForm from './components/PageCommentsForm/PageCommentsForm';
-import CommentsDisplayed from './components/PageEnteredComments/PageEnteredComments';
+import EnteredComments from './components/PageEnteredComments/PageEnteredComments';
 import PageNextVideo from './components/PageNextVideo/PageNextVideo';
 import VideoPlaceholder from './assets/Images/video-list-0.jpg';
 import AppStyles from './app.scss'
@@ -28,7 +28,7 @@ class App extends React.Component {
         image: VideoPlaceholder,
         views: '1,001,023',
         likes: '110,985',
-        duration: '4:00',
+        duration: '0:00/0:42',
         video: 'video',
         timestamp: '12/18/2018',
         comments: 
@@ -144,23 +144,16 @@ class App extends React.Component {
         <PageHeader />
         <main>
           <PageCurrentVideo
-            key={this.state.currentVideo.id}
-            videoPoster={this.state.currentVideo.image} />
-
+          currentVideo={this.state.currentVideo} />
             <section className="video-content">
               <div className="video-content__current">
-                <PageVideoContent key={this.state.currentVideo.id} 
-                  videoTitle={this.state.currentVideo.title} 
-                  videoChannel={this.state.currentVideo.channel} 
-                  date={this.state.currentVideo.timestamp} 
-                  videoViews={this.state.currentVideo.views} 
-                  videoLikes={this.state.currentVideo.likes} 
-                  videoDescription={this.state.currentVideo.description}/>
-
+                <PageVideoContent
+                  currentVideo={this.state.currentVideo} />
                 <PageCommentsForm />
                   <section className="comment-entries">
                     {this.state.currentVideo.comments.map (entry => {
-                      return <CommentsDisplayed 
+                      return <EnteredComments 
+                      // commentEntry = {this.state.currentVideo.comments}
                       key={entry.id} 
                       name={entry.name} 
                       date={entry.date} 

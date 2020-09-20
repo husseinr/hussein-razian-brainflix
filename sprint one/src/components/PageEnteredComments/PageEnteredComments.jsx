@@ -2,7 +2,7 @@ import React from 'react';
 import './pageEnteredComments.scss';
 
 
-function CommentsDisplayed(props) {
+function EnteredComments(props) {
 
     return (
         <div className="comment-entries__card">
@@ -21,4 +21,4 @@ function CommentsDisplayed(props) {
     )
 }
 
-export default CommentsDisplayed;
+export default EnteredComments;
