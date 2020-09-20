@@ -13,7 +13,7 @@ function PageNextVideo (props) {
             <div className="next-video-info">
                 <p className="next-video-info__title">
                     {props.videoTitle}</p>
-                <p className="next-video-info__author">
+                <p className="next-video-info__channel">
                     {props.channelTitle}</p>
             </div>
         </div>

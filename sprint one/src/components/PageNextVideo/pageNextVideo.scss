@@ -4,28 +4,49 @@
     @include avenirReg;
     padding: 0 5%;
 
-    &__title {
+    @include tablet {
+        padding: 0 3%;
+    }
+
+    @include desktop {
+        padding-right: 13%;
+        padding-left: 0;
+        margin-left: 2em;
+    }
+
+    &__header {
         @include avenirDemi;
+        font-size: $m-sub-header-font-size;
         color: rgb(185, 185, 185);
+        margin: 2.5em 0;
     }
 
     &-video {
-        display:flex;
-        flex-direction: row;
-        margin-bottom:24px;
+        @include commonFlex (none,row,none);
+        margin-bottom:1.5em;
         
         &-info {
-            margin-left: 16px;
+            @include commonFlex (space-between,column,none);
+            margin-left: 1em;
+            height: 65px;
+            width: 135px;
+
+            @include tablet {
+                width: 180px;
+            }
+       
+
             &__title {
                 @include avenirDemi;
                 margin-top: 0;
-                margin-bottom: 8px;
+                margin-bottom: 0.5em;
+                font-size: $m-video-title-font-size;
             }
 
             &__channel {
                 margin: 0;
+                font-size: $m-label-font-size;
             }
-
         }
 
         &__photo {
@@ -33,6 +54,5 @@
             width: 120px;
             height: 70px;
         }
-
     }
 }

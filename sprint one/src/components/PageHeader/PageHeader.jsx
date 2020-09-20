@@ -12,7 +12,7 @@ const PageHeader = () => {
                     <input className="nav__search-button" type="text" name="search" placeholder="Search"/>
                 </form>
                 <div className="nav__user">
-                    <button className="nav__user-upload"> + UPLOAD </button>
+                    <button className="nav__user-upload"> UPLOAD </button>
                     <img className="nav__user-photo" src={UserLogo} alt="site-logo"></img>
                 </div>
             </nav>

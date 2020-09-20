@@ -14,7 +14,7 @@ function CommentsDisplayed(props) {
                     <p className="comment-entries__card-content-info-date">
                         {props.date}</p>
                 </div>
-                <p className="comment-entries__card-contentcomment">
+                <p className="comment-entries__card-content-comment">
                     {props.comment}</p>
             </div>
         </div>

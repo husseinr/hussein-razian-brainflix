@@ -1,0 +1,110 @@
+@import '../../styles/partials/common-styles';
+
+.content {
+        
+    &__title {
+        padding: 0 5%;
+        @include avenirBold;
+
+        @include tablet {
+            padding:0 3%;
+            margin-top:1.5em;
+            margin-bottom:0.75em;
+            font-size: $header2-font-size;
+        }
+
+        @include desktop {
+            padding:0 13%;
+        }
+    }
+
+    &__info {
+        @include commonFlex(space-between,column,none);
+        border-bottom: 1px solid $form-section-color;
+        padding: 0 5%;
+
+        @include tablet {
+            @include commonFlex(space-between,row,none);
+            padding: 0 3%;
+        }
+
+        @include desktop {
+            padding-left: 13%;
+            padding-right: 0;
+        }
+
+        &-channel {
+            @include commonFlex(none,row,none);
+            width: 100%;
+
+            @include tablet {
+                justify-content: none;
+                width: 27%;
+                margin: 0;
+            }
+
+            @include desktop {
+                width: 40%;
+            }
+
+            &-name {
+                @include avenirBold;
+                margin-right: 8px;
+            }
+
+            &-date {
+                @include avenirDemi;
+                color: $form-section-color;
+            }
+        }
+
+        &-stats{
+            @include commonFlex(none,row,none);
+            @include avenirReg;
+            width: 90%;
+
+            @include tablet {
+                width: 37%;
+            }
+
+            @include desktop {
+                width: 40%;
+            }
+            &-item{
+                @include commonFlex(none,row,none);
+                width: 8em;
+    
+                &-icon {
+                    margin-right: 8px;
+                    @include tablet {
+                        margin-left: 24px;
+                    }
+                  
+                }
+            }
+        }
+    }
+
+    &__description {
+    @include avenirReg;
+        padding: 0 5%;
+        margin: 0;
+        line-height: 1.5em;
+        font-size:$m-paragraph-font-size;
+        padding-top: 24px;
+
+        @include tablet {
+            padding: 0 3%;
+            margin-top: 40px;
+            margin-bottom: 64px;
+            line-height: $paragraph-line-height;
+            width: 63%;
+        }
+
+        @include desktop {
+            width: 68%;
+            padding-left: 13%;
+            padding-right: 0;
+        } 
+    }
+}

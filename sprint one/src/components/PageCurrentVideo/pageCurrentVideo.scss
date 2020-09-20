@@ -1,0 +1,120 @@
+@import '../../styles/partials/common-styles';
+
+.video {
+    position: relative;
+
+    &__displayed {
+
+        background-color:black;
+        position: relative;
+        height:auto;
+
+        @include tablet {
+            padding: 0 3%;
+        }
+
+        @include desktop {
+            padding: 0 17%;
+        }
+
+        &-poster {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__bar {
+        padding: 0 5%;
+        width: 88%;
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+        position: absolute;
+        bottom: 12px;
+
+        @include tablet {
+            padding: 0 1%;
+            width: 90%;
+        }
+
+        @include desktop {
+            width: 64%;
+        }
+
+        &-play {
+
+            background-color: rgb(20, 20, 20);
+            opacity: 0.5;
+            border-radius:3px;
+            width: 32px;
+
+            &-button {
+                padding: 5px 10px;
+            }
+        }
+
+        &-scrubber {
+            background-color: rgb(20, 20, 20);
+            opacity: 0.5;
+            width: 50%;
+            border-radius:3px;
+            padding: 15px 0;
+
+            @include tablet {
+                @include commonFlex(space-between,row,none);
+                padding: 0 0;
+            }
+
+            &-progress {
+                background-color:black;
+                width: 85%;
+                height: 3px;
+                margin-left: 0.8em;
+
+                @include tablet {
+                    width: 75%;
+                    margin-top: 15px;
+                }
+
+                @include desktop {
+                    width: 93%;
+                }
+            }
+
+            &-time {
+            display: none;
+            color:white;
+
+                @include tablet {
+                    display: inline;
+                   font-size: 12px;
+                   margin-top: 8px;
+                   padding-right: 5px;
+                   margin-bottom: 0;
+                }
+            }
+        }
+
+        &-options {
+            width: 70px;
+            background-color: rgb(20, 20, 20);
+            opacity: 0.5;
+            border-radius:3px;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+
+            &-button {
+
+            }
+
+            &-button-full {
+                padding-left: 10px;
+            }
+
+            &-button-volume {
+                padding-right: 10px;
+            }
+        }
+    }
+}

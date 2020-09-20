@@ -10,8 +10,10 @@ const PageCommentsForm = () => {
         <form className="comments__form">
             <img className="comments__form-user-image" src={UserLogo} alt="user-image"></img>
             <div className="comments__form-input">
-                <label className="comments__form-comment-label" name="comment-entry-field">JOIN THE CONVERSATION</label>
-                <textarea className="comments__form-comment-field" placeholder="Write comment here"></textarea>
+                <div className="comments__form-input-box">
+                    <label className="comments__form-comment-label" name="comment-entry-field">JOIN THE CONVERSATION</label>
+                    <textarea className="comments__form-comment-field" placeholder="Write comment here"></textarea>
+                </div>
                 <button className="comments__form-button"> COMMENT</button>
             </div>
         </form>
