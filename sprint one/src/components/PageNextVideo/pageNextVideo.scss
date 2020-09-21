@@ -11,20 +11,31 @@
     @include desktop {
         padding-right: 13%;
         padding-left: 0;
-        margin-left: 2em;
-        margin-top: 40px;
+        margin-left: 3%;
+        margin-top: 1em;
+        border-left:  1px solid $form-section-color;
     }
 
     &__header {
         @include avenirDemi;
         font-size: $m-sub-header-font-size;
-        color: rgb(185, 185, 185);
+        color: $label-color;
         margin: 2.5em 0;
+
+        @include desktop {
+        padding-left: 1em;
+        }
     }
 
     &-video {
         @include commonFlex (none,row,none);
         margin-bottom:1.5em;
+
+        @include desktop {
+        padding-left: 1em;
+        }
+    
+
         
         &-info {
             @include commonFlex (space-between,column,none);
@@ -42,6 +53,14 @@
                 margin-top: 0;
                 margin-bottom: 0.5em;
                 font-size: $m-video-title-font-size;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include vidTitles {
+                    white-space: normal;
+                    overflow: visible;
+                }
             }
 
             &__channel {

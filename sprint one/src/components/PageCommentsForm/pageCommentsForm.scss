@@ -61,13 +61,13 @@
         &-comment-label {
         @include avenirBold;
         font-size: $label-font-size;
-        color: $form-section-color;
+        color: $label-color;;
         margin-bottom: 8px;
         }
 
         &-comment-field {
             @include avenirDemi;
-            border: rgb(172, 172, 172) solid 1px;
+            border: $brainflix-blue solid 2px;
             background-color: rgb(247, 247, 247);
             width: 95%;
             height: 70px;
@@ -92,7 +92,7 @@
             border: 0;
             border-radius:5px;
             color: white;
-            background-color:#0095ff;
+            background-color: $brainflix-blue;
             margin-right: 16px;
             font-size: 16px;
             margin-bottom: 24px;

@@ -15,14 +15,14 @@ import PageCommentsForm from './components/PageCommentsForm/PageCommentsForm';
 import EnteredComments from './components/PageEnteredComments/PageEnteredComments';
 import PageNextVideo from './components/PageNextVideo/PageNextVideo';
 import VideoPlaceholder from './assets/Images/video-list-0.jpg';
-import AppStyles from './app.scss'
+import './app.scss'
 
 class App extends React.Component {
   state = {
       currentVideo:
       {
         id: uid(),
-        title: 'BMX Rampage:2018 Highlights',
+        title: 'BMX Rampage: 2018 Highlights',
         description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title',
         channel: 'Red Cow',
         image: VideoPlaceholder,
@@ -65,77 +65,76 @@ class App extends React.Component {
               definitely my favorite ever!`,
               id: uid()
           },
-        ]
+        ],
       },    
             
-        upComingVideo: [
+      upComingVideo: [
 
-            {
-                image: TravelPro,
-                alt: 'travel-photo',
-                title: 'Become A Travel Pro In One Easy Lesson',
-                channel: 'Scotty Cranmer',
-                id: uid(),
-            },
-        
-            {
-                image: LesHouches,
-                alt: 'les-houches-photo',
-                title: 'Les Houches The Hidden Gem Of The',
-                channel: 'Scotty Cranmer',
-                id: uid(),
-            },
-        
-            {
-                image: TravelHealth,
-                alt: 'health-photo',
-                title: 'Travel Health Useful Medical Information',
-                channel: 'Scotty Cranmer',
-                id: uid(),
-            },
-        
-            {
-                image: CheapAirline,
-                alt: 'airline-photo',
-                title: 'Cheap Airline Tickets Great Ways To Save',
-                channel: 'Emily Harper',
-                id: uid(),
-            },
-        
-            {
-                image: RomanticBreak,
-                alt: 'romantic-photo',
-                title: 'Take A Romantic Break In A Boutique Hotel',
-                channel: 'Ethan Owen',
-                id: uid(),
-            },
-        
-            {
-                image: PerfectAccommodations,
-                alt: 'accommodations-photo',
-                title: 'Choose The Perfect Accommodations',
-                channel: 'Lydia Perez',
-                id: uid(),
-            },
-        
-            {
-                image: CruisingDestination,
-                alt: 'cruise-photo',
-                title: 'Crusing Destination Ideas',
-                channel: 'Timothy Austin',
-                id: uid(),
-            },
-        
-            {
-                image: TrainTravel,
-                alt: 'train-photo',
-                title: 'Train Travel On Track For Safety',
-                channel: 'Scotty Cranmer',
-                id: uid(),
-            },
-        ],
-    }
-
+          {
+              image: TravelPro,
+              alt: 'travel-photo',
+              title: 'Become A Travel Pro In One Easy Lesson',
+              channel: 'Scotty Cranmer',
+              id: uid(),
+          },
+      
+          {
+              image: LesHouches,
+              alt: 'les-houches-photo',
+              title: 'Les Houches The Hidden Gem Of The',
+              channel: 'Scotty Cranmer',
+              id: uid(),
+          },
+      
+          {
+              image: TravelHealth,
+              alt: 'health-photo',
+              title: 'Travel Health Useful Medical Information',
+              channel: 'Scotty Cranmer',
+              id: uid(),
+          },
+      
+          {
+              image: CheapAirline,
+              alt: 'airline-photo',
+              title: 'Cheap Airline Tickets Great Ways To Save',
+              channel: 'Emily Harper',
+              id: uid(),
+          },
+      
+          {
+              image: RomanticBreak,
+              alt: 'romantic-photo',
+              title: 'Take A Romantic Break In A Boutique Hotel',
+              channel: 'Ethan Owen',
+              id: uid(),
+          },
+      
+          {
+              image: PerfectAccommodations,
+              alt: 'accommodations-photo',
+              title: 'Choose The Perfect Accommodations',
+              channel: 'Lydia Perez',
+              id: uid(),
+          },
+      
+          {
+              image: CruisingDestination,
+              alt: 'cruise-photo',
+              title: 'Crusing Destination Ideas',
+              channel: 'Timothy Austin',
+              id: uid(),
+          },
+      
+          {
+              image: TrainTravel,
+              alt: 'train-photo',
+              title: 'Train Travel On Track For Safety',
+              channel: 'Scotty Cranmer',
+              id: uid(),
+          },
+      ],
+    };
 
     render()
     {
@@ -153,7 +152,6 @@ class App extends React.Component {
                   <section className="comment-entries">
                     {this.state.currentVideo.comments.map (entry => {
                       return <EnteredComments 
-                      // commentEntry = {this.state.currentVideo.comments}
                       key={entry.id} 
                       name={entry.name} 
                       date={entry.date} 
@@ -166,7 +164,6 @@ class App extends React.Component {
                     {this.state.upComingVideo.map (video => {
                       return <PageNextVideo 
                       key={video.id} 
-                      videoID={video.id} 
                       videoTitle={video.title} 
                       channelTitle={video.channel} 
                       videoImage={video.image} 
@@ -177,7 +174,7 @@ class App extends React.Component {
         </main>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;

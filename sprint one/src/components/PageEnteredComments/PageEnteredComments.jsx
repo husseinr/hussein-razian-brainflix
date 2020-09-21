@@ -10,12 +10,15 @@ function EnteredComments(props) {
             <div className="comment-entries__card-content">
                 <div className="comment-entries__card-content-info">
                     <p className="comment-entries__card-content-info-name">
-                        {props.name}</p>
+                        {props.name}
+                    </p>
                     <p className="comment-entries__card-content-info-date">
-                        {props.date}</p>
+                        {props.date}
+                    </p>
                 </div>
                 <p className="comment-entries__card-content-comment">
-                    {props.comment}</p>
+                    {props.comment}
+                </p>
             </div>
         </div>
     )

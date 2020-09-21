@@ -18,6 +18,12 @@
     
 }
 
+@mixin vidTitles {
+    @media (min-width: 350px)
+    {@content;}
+    
+}
+
 @mixin avenirReg {
     font-family: 'Avenir';
     font-weight: 400;

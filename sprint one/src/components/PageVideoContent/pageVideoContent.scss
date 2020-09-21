@@ -4,9 +4,12 @@
         
     &__title {
         padding: 0 5%;
+        width: 87%;
+        margin-bottom:0;
         @include avenirBold;
 
         @include tablet {
+            width: 100%;
             padding:0 3%;
             margin-top:1.5em;
             margin-bottom:0.75em;
@@ -14,24 +17,28 @@
         }
 
         @include desktop {
+            width: 75%;
             padding-left: 22%;
             padding-right: 0;
+            margin-bottom: 0;
         }
     }
 
     &__info {
         @include commonFlex(space-between,column,none);
         border-bottom: 1px solid $form-section-color;
-        padding: 0 5%;
+        margin-left: 5%;
+        width: 87%;
 
         @include tablet {
             @include commonFlex(space-between,row,none);
-            padding: 0 3%;
+            margin-left: 3%;
+            width: 94%;
         }
 
         @include desktop {
-            padding-left: 22%;
-            padding-right: 0;
+            margin-left: 22%;
+            width: 83.5%;
         }
 
         &-channel {
@@ -45,7 +52,7 @@
             }
 
             @include desktop {
-                width: 40%;
+                width: 50%;
             }
 
             &-name {
@@ -55,7 +62,7 @@
 
             &-date {
                 @include avenirDemi;
-                color: $form-section-color;
+                color: $label-color;
             }
         }
 
@@ -69,7 +76,7 @@
             }
 
             @include desktop {
-                width: 40%;
+                width: 44%;
             }
             &-item{
                 @include commonFlex(none,row,none);
@@ -98,8 +105,9 @@
             padding: 0 3%;
             margin-top: 40px;
             margin-bottom: 64px;
+            font-size:$paragraph-font-size;
             line-height: $paragraph-line-height;
-            width: 63%;
+            width: 68%;
         }
 
         @include desktop {
