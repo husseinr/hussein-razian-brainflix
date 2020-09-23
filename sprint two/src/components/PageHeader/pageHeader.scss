@@ -1,0 +1,100 @@
+@import '../../styles/partials/common-styles';
+.nav {
+    @include avenirDemi;
+    padding: 0 5%;
+    margin: 1em 0;
+
+    @include tablet {
+        padding: 2% 3%;
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    @include desktop {
+        padding-left: 13%;
+        padding-right: 0;
+        width: 75%;
+    }
+
+    &__logo {
+        display:block;
+        margin: 0.5em auto;
+        margin-top: 0.5em;
+        width:9em;
+
+        @include tablet {
+          margin: 0;
+          margin-top: 0.5em;
+        }
+
+        @include desktop {
+            margin-right: 8em;
+        }
+    }
+
+    &__search-button {
+        width: 85%;
+        margin:0.5em 0;
+        background-image: url(../../assets/Icons/SVG/Icon-search.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 15px;
+        height: 45px;
+        padding-left: 40px;
+        border-radius:5px;
+        border: rgb(172, 172, 172) solid 1px;
+        background-color: rgb(247, 247, 247);
+
+        @include tablet {
+            margin: 0;
+            width:100%;
+        }
+    }
+
+    &__user {
+        margin-top: 8px;
+   
+        @include tablet {
+            margin: 0;
+            width: 12em;
+            @include commonFlex(space-between,row,none);
+            align-items: flex-end;
+        }
+
+        &-upload {
+            @include avenirDemi;
+            width: 14em;
+            height:47px;
+            border: 0;
+            border-radius:5px;
+            color: white;
+            background-color: $brainflix-blue;
+            vertical-align: top;
+            margin-right: 0.50em;
+            font-size: 1rem;
+            background-image: url(../../assets/Icons/SVG/Icon-upload.svg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 40px;
+
+            @include tablet {
+                margin-right: 1.5em;
+                background-position: 5px;
+            }
+        }
+
+        &-upload:hover {
+            background-color: #0065ad;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    
+        &-photo {
+            border-radius:50%;
+            height:45px;
+            width: 45px;
+            margin-top: 1px;
+        }
+    }
+}

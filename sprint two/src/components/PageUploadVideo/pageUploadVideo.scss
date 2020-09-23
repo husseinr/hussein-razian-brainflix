@@ -1,0 +1,23 @@
+@import '../../styles/partials/common-styles';
+
+.upload {
+    @include avenirDemi;
+    margin: 0;
+
+    &__header{
+        font-size: $m-header-font-size;
+        margin: 0;
+    }
+
+    &-section {
+
+
+        &__label {
+            font-size: $m-label-font-size;
+        }
+
+        &__image {
+
+        }
+    }
+}

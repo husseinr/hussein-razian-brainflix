@@ -159,17 +159,17 @@ class App extends React.Component {
                     })}
                   </section>
               </div>
-                <aside className="next">
-                  <h3 className="next__header">NEXT VIDEO</h3>
-                    {this.state.upComingVideo.map (video => {
-                      return <PageNextVideo 
-                      key={video.id} 
-                      videoTitle={video.title} 
-                      channelTitle={video.channel} 
-                      videoImage={video.image} 
-                      photoAlt={video.alt}/>
-                    })}
-                </aside>
+              <aside className="next">
+                <h3 className="next__header">NEXT VIDEO</h3>
+                  {this.state.upComingVideo.map (video => {
+                    return <PageNextVideo 
+                    key={video.id} 
+                    videoTitle={video.title} 
+                    channelTitle={video.channel} 
+                    videoImage={video.image} 
+                    photoAlt={video.alt}/>
+                  })}
+              </aside>
             </section>
         </main>
       </div>

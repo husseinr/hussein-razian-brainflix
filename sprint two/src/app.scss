@@ -1,0 +1,15 @@
+@import './styles/partials/common-styles';
+
+.video-content {
+    @include desktop {
+        @include commonFlex(space-between,row,none)
+    }
+
+    &__current {
+
+        @include desktop {
+            width: 712px;
+            padding-bottom: 1em;
+        }
+    }
+}   

@@ -1,0 +1,114 @@
+@import '../../styles/partials/common-styles';
+
+.comments {
+    margin: 0;
+    @include avenirReg;
+    padding: 0 5%;
+
+    @include tablet {
+        padding: 0 3%;
+        margin-bottom: 24px;
+    }
+
+    @include desktop {
+        padding-left: 22%;
+        padding-right: 0;
+        margin-bottom: 24px;
+    }
+    
+    &__header {
+        @include avenirDemi;
+
+        @include tablet {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__form {
+
+        @include avenirDemi;
+        @include commonFlex(space-between,row,none);
+    
+        &-user-image {
+            height:45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-right: 5px;
+
+            @include tablet {
+                margin-right: 10px;
+            }
+            
+        }
+
+        &-input {
+            width: 100%;
+
+            @include tablet {
+                @include commonFlex(space-between,row,none);
+                align-items: flex-end;
+            }
+
+            &-box {
+                @include tablet {
+                    @include commonFlex(none,column,none);
+                    width: 100%;
+                }
+            }
+        }
+
+        &-comment-label {
+        @include avenirBold;
+        font-size: $label-font-size;
+        color: $label-color;;
+        margin-bottom: 8px;
+        }
+
+        &-comment-field {
+            @include avenirDemi;
+            border: $brainflix-blue solid 2px;
+            background-color: rgb(247, 247, 247);
+            width: 95%;
+            height: 70px;
+            margin-top: 5px;
+            margin-bottom: 16px;
+            border-radius:5px;
+            padding-top: 10px;
+            padding-left: 10px;
+
+            @include tablet {
+                height: 30px;
+                margin: 0 0;
+                width: 90%;
+            }
+        }
+
+        &-button {
+            @include avenirDemi;
+            width: 100%;
+            margin-right:0;
+            height:50px;
+            border: 0;
+            border-radius:5px;
+            color: white;
+            background-color: $brainflix-blue;
+            margin-right: 16px;
+            font-size: 16px;
+            margin-bottom: 24px;
+
+            @include tablet {
+                height: 45px;
+                width: 160px;
+                margin-bottom: 0;
+                margin-right: 2.5em;
+            }
+
+            @include desktop {
+                margin-right:0;
+            }
+        }
+    }
+}
+
+  
