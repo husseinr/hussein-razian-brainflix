@@ -6,27 +6,28 @@ import './pageUploadVideo.scss';
 
  function PageUploadVideo() {
     return (
-  
-        <main className="upload">
-            <h1 className="upload__header"> Upload Video </h1>
 
-            <section className="upload-section">
-                <p className="upload-section__label"> VIDEO THUMBNAIL </p>
-                <img className="upload-section__image" src={UploadThumbnail} alt='thumbnail'/>
+            <main className="upload">
+                <h1 className="upload__header"> Upload Video </h1>
 
-                <form className="upload-section__form">
-                <label className="upload-section__form-label">TITLE YOUR VIDEO</label>
-                <input className="upload-section__form-title" name="title-input" value="title" placeholder="Add a title to your video"></input>
+                <section className="upload-section">
+                    <p className="upload-section__label"> VIDEO THUMBNAIL </p>
+                    <img className="upload-section__image" src={UploadThumbnail} alt='thumbnail'/>
 
-                <label className="upload-section__form-label">ADD A VIDEO DESCRIPTION</label>
-                <textarea className="upload-sectopm__form-description" name="description-input" value="description" placeholder="Add a description of your video"></textarea>
+                    <form className="upload-section__form">
+                    <label className="upload-section__form-label">TITLE YOUR VIDEO</label>
+                    <input className="upload-section__form-title" name="title-input" value="title" placeholder="Add a title to your video"></input>
 
-                <button className="upload-section__form-button">PUBLISH</button>
-                <p className="upload-section__form-cancel">CANCEL</p>
-                </form>
-            </section>
+                    <label className="upload-section__form-label">ADD A VIDEO DESCRIPTION</label>
+                    <textarea className="upload-sectopm__form-description" name="description-input" value="description" placeholder="Add a description of your video"></textarea>
 
-        </main>
+                    <button className="upload-section__form-button">PUBLISH</button>
+                    <p className="upload-section__form-cancel">CANCEL</p>
+                    </form>
+                </section>
+
+            </main>
+
     )
 }
 
