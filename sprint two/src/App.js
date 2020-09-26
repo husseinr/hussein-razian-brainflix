@@ -1,6 +1,5 @@
 import React from 'react';
-import * as uid from 'uniqid';
-import {Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter,Route, Switch} from 'react-router-dom';
 // import TravelPro from './assets/Images/video-list-1.jpg';
 // import LesHouches from './assets/Images/video-list-2.jpg';
 // import TravelHealth from './assets/Images/video-list-3.jpg';
@@ -187,18 +186,16 @@ import './app.scss'
 function App () {
 
   return (
+    <BrowserRouter>
         <div className="App">
           <PageHeader />
-          <Link to="/"></Link>
-          <Link to="/upload"></Link>
           <Switch>
             <Route path="/" exact component={MainVideoPage}/>
             <Route path="/upload" component={PageUploadVideo}/>
+            <Route path="/:id" component={MainVideoPage}/>
           </Switch>
-          {/* <MainVideoPage />
-          <PageUploadVideo /> */}
         </div>
-
+    </BrowserRouter>
   )
 }
 

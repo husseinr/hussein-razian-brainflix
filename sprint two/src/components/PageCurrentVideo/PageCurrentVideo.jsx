@@ -6,8 +6,8 @@ import VolumeButton from '../../assets/Icons/SVG/Icon-volume.svg'
 
 function PageCurrentVideo (props) {
     return (
-        <section className="video">
-            <div className="video__displayed" key ={props.currentVideo.id}>
+        <section key ={props.currentVideo.id} className="video">
+            <div className="video__displayed">
                 <video className="video__displayed-poster" poster={props.currentVideo.image}>
                 
                 </video>

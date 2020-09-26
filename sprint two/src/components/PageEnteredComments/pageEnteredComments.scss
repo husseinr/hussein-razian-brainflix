@@ -6,15 +6,12 @@
     border-bottom: $form-section-color solid 1px;
 
     @include tablet {
-        // width: 100%;
         margin-left:3%;
     }
 
     @include desktop {
         width: 83%;
         margin-left:22%;
-        // padding-left: 22%;
-        // padding-right: 0;
     }
 
     &__card {
