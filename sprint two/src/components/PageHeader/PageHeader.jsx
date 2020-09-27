@@ -13,14 +13,16 @@ const PageHeader = () => {
                 <Link to="/" alt="site-logo">
                     <img className="nav__logo" src={SiteLogo} alt="site-logo"></img>
                 </Link>
-                <form className="nav__search" action="search">
-                    <input className="nav__search-button" type="text" name="search" placeholder="Search"/>
-                </form>
-                <div className="nav__user">
-                    <Link to="/upload"> 
-                        <button className="nav__user-upload"> UPLOAD </button>
-                    </Link>
-                    <img className="nav__user-photo" src={UserLogo} alt="user-logo"></img>
+                <div className="nav-items">
+                    <form className="nav-itmems__search" action="search">
+                        <input className="nav-items__search-button" type="text" name="search" placeholder="Search"/>
+                    </form>
+                    <div className="nav-items__user">
+                        <Link to="/upload" alt="upload-page"> 
+                            <button className="nav-items__user-upload"> UPLOAD </button>
+                        </Link>
+                        <img className="nav-items__user-photo" src={UserLogo} alt="user-logo"></img>
+                    </div>
                 </div>
             </nav>
      </header>

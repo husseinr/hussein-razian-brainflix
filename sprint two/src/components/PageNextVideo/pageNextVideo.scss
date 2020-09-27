@@ -1,5 +1,10 @@
 @import '../../styles/partials/common-styles';
 
+a{
+    text-decoration: none;
+    color: $primary-font-color;
+}
+
 .next {
     @include avenirReg;
     padding: 0 5%;

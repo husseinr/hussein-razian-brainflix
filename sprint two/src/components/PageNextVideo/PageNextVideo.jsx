@@ -5,9 +5,8 @@ import './pageNextVideo.scss';
 function PageNextVideo (props) {
 
     return (
-        <div className="next-video">
-            <Link to={`/${props.id}`} >
-                <div  >
+        <div>
+            <Link to={`/${props.id}`}  className="next-video">
                     <img  className="next-video__photo"
                     src={props.videoImage} 
                     alt={props.videoTitle}>
@@ -19,7 +18,6 @@ function PageNextVideo (props) {
                         <p className="next-video-info__channel">
                             {props.channelTitle}</p>
                     </div>
-                </div>
             </Link>
         </div>
     )

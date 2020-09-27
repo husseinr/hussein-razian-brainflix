@@ -6,17 +6,15 @@ import PageCommentsForm from '../PageCommentsForm/PageCommentsForm';
 import EnteredComments from '../PageEnteredComments/PageEnteredComments';
 import PageNextVideo from '../PageNextVideo/PageNextVideo';
 
-
 const url ="https://project-2-api.herokuapp.com/videos/?api_key=";
 let api_key="33e84b73-0d50-49bb-aead-1fff87462673";
-
-
 
 class MainVideoPage extends React.Component {
   state = {
     activeVideo:[], 
 
     videos: [],
+
     };
 
     componentDidMount() {
