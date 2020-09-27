@@ -3,7 +3,7 @@ import './pageEnteredComments.scss';
 
 
 function EnteredComments(props) {
-
+    let actualDate = new Date(props.date); 
     return (
         <div className="comment-entries__card">
             <div className="comment-entries__card-photo"></div>
@@ -13,7 +13,7 @@ function EnteredComments(props) {
                         {props.name}
                     </p>
                     <p className="comment-entries__card-content-info-date">
-                        {props.date}
+                        {actualDate.toLocaleDateString()}
                     </p>
                 </div>
                 <p className="comment-entries__card-content-comment">
@@ -21,6 +21,7 @@ function EnteredComments(props) {
                 </p>
             </div>
         </div>
+    
     )
 }
 

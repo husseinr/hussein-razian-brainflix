@@ -6,6 +6,7 @@ import './pageVideoContent.scss';
 
 
 function PageVideoContent (props) {
+    let actualDate = new Date(props.currentVideo.timestamp); 
     return (
         <section className="content" key={props.currentVideo.id}>
             
@@ -14,7 +15,7 @@ function PageVideoContent (props) {
             <div className="content__info">
                 <div className="content__info-channel">
                     <p className="content__info-channel-name">By {props.currentVideo.channel}</p>
-                    <p className="content__info-channel-date">{props.currentVideo.timestamp}</p>
+                    <p className="content__info-channel-date">{actualDate.toLocaleDateString()}</p>
                 </div>
 
                 <div className="content__info-stats">
