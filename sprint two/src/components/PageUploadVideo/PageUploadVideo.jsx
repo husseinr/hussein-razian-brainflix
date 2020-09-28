@@ -8,8 +8,8 @@ import './pageUploadVideo.scss';
 
         <main className="upload">
             <h1 className="upload__header"> Upload Video </h1>
-
             <section >
+                
                 <div className="upload-section">
                     <div className="upload-section__thumbnail">
                         <p className="upload-section__thumbnail-label"> VIDEO THUMBNAIL </p>
@@ -17,15 +17,13 @@ import './pageUploadVideo.scss';
                     </div>
 
                     <form className="upload-section__form">
-                        <div>
-                            <label className="upload-section__form-label">TITLE YOUR VIDEO</label>
-                            <input className="upload-section__form-title" name="title-input" value="Add a title to your video" placeholder="Add a title to your video"></input>
-                        </div>
-
-                        <div>
-                            <label className="upload-section__form-label">ADD A VIDEO DESCRIPTION</label>
-                            <textarea className="upload-section__form-description" name="description-input" value="Add a description of your video" placeholder="Add a description of your video"></textarea>
-                        </div>
+                        <label className="upload-section__form-label">TITLE YOUR VIDEO
+                            <input className="upload-section__form-title" name="title-input" type="text" placeholder="Add a title to your video"/>
+                        </label>
+            
+                        <label className="upload-section__form-label">ADD A VIDEO DESCRIPTION
+                            <textarea className="upload-section__form-description" name="description-input" type="text"  placeholder="Add a description of your video"></textarea>
+                        </label>
                     </form>
                 </div>
 

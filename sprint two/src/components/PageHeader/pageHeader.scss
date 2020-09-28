@@ -5,14 +5,15 @@
     margin: 1em 0;
 
     @include tablet {
-        padding: 2% 3%;
         @include commonFlex(space-between,row,none);
+        padding: 2% 3%;
+    
     }
 
     @include desktop {
         padding-left: 13%;
         padding-right: 0;
-        width: 75%;
+        width: 74%;
     }
 
     &__logo {
@@ -35,7 +36,7 @@
 
         @include tablet {
             @include commonFlex(space-between,row,none);
-            width: 27em;
+            width: 24em;
         }
 
         &__search-button {
@@ -53,8 +54,7 @@
     
             @include tablet {
                 margin: 0;
-                width:90%;
-        
+                width: 75%;
             }
         }
     
@@ -85,9 +85,10 @@
                 background-position: 40px;
     
                 @include tablet {
-                    margin-right: 1em;
-                    background-position: 5px;
+                    margin: 0 0.5em;
+                    background-position: 10px;
                     width: 8em;
+                    padding-left: 1em;
                 }
             }
     

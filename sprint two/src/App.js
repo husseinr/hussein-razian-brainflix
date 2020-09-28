@@ -4,9 +4,6 @@ import PageHeader from './components/PageHeader/PageHeader';
 import MainVideoPage from './components/MainVideoPage/MainVideoPage';
 import PageUploadVideo from './components/PageUploadVideo/PageUploadVideo'
 
-
-import './app.scss'
-
 function App () {
 
   return (

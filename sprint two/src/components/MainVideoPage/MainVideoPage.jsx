@@ -5,6 +5,7 @@ import PageVideoContent from '../PageVideoContent/PageVideoContent';
 import PageCommentsForm from '../PageCommentsForm/PageCommentsForm';
 import EnteredComments from '../PageEnteredComments/PageEnteredComments';
 import PageNextVideo from '../PageNextVideo/PageNextVideo';
+import './mainVideoPage.scss';
 
 const url ="https://project-2-api.herokuapp.com/videos/?api_key=";
 let api_key="33e84b73-0d50-49bb-aead-1fff87462673";
@@ -18,45 +19,44 @@ class MainVideoPage extends React.Component {
     };
 
     componentDidMount() {
-        axios
-        .get (url+api_key)
-        .then(res=> {
-            this.setState({
-                videos: res.data
-            })
-            console.log(res)
-        })
 
-        .catch(err=> {console.log(err)})
+      axios
+      .get (url+api_key)
 
-        axios
-        .get (`https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=`+api_key)
-        .then(res=> {
+      .then(res=> {
+          this.setState({
+              videos: res.data
+          })
+      })
 
-            this.setState({
-                activeVideo: res.data
-            })
-            console.log(res)
-        })
+      .catch(err=> {console.log(err)})
 
-        .catch(err=> {console.log(err)})
+      axios
+      .get (`https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=`+api_key)
+
+      .then(res=> {
+          this.setState({
+              activeVideo: res.data
+          })
+      })
+
+      .catch(err=> {console.log(err)})
     }
 
     componentDidUpdate () {
       const {match: {params}} = this.props;
       axios
       .get (`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=`+api_key)
+      
       .then(res=> {
         if(this.state.activeVideo.id !== params.id)
           this.setState({
               activeVideo: res.data
           })
-
-          console.log(res)
       })
 
       .catch(err=> {console.log(err)})
-  }
+    }
 
     render()
 

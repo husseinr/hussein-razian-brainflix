@@ -6,8 +6,6 @@ import './pageHeader.scss';
 
 const PageHeader = () => {
     return (
-
-
         <header>
             <nav className="nav">
                 <Link to="/" alt="site-logo">

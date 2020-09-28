@@ -21,7 +21,7 @@ function PageCurrentVideo (props) {
                         <div className="video__bar-scrubber-progress">
                 
                         </div>
-                        <p className="video__bar-scrubber-time">{props.currentVideo.duration}</p>
+                        <p className="video__bar-scrubber-time">0:00/{props.currentVideo.duration}</p>
                     </div>
 
                     <div className="video__bar-options">

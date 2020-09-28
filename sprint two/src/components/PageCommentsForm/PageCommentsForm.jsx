@@ -16,7 +16,7 @@ function PageCommentsForm  () {
             <div className="comments__form-input">
                 <div className="comments__form-input-box">
                     <label className="comments__form-comment-label" name="comment-entry-label">JOIN THE CONVERSATION</label>
-                    <textarea className="comments__form-comment-field" name="entry" placeholder="Write comment here"></textarea>
+                    <textarea className="comments__form-comment-field" name="entry" type="text" placeholder="Write comment here"></textarea>
                 </div>
                 <button className="comments__form-button"> COMMENT</button>
             </div>

@@ -7,21 +7,23 @@
 
         background-color:black;
         position: relative;
-        width: 100%;
         height:auto;
-
-        @include tablet {
-            padding: 0 3%;
-        }
-
-        @include desktop {
-            padding: 0 17%;
-        }
+        width: 100%;
 
         &-poster {
             width: 100%;
             height: auto;
             display: block;
+
+            @include tablet {
+                width: 94%;
+                padding: 0 3%
+            }
+
+            @include desktop {
+                width: 66%;
+                padding: 0 17%
+            }
         }
     }
 
@@ -36,12 +38,12 @@
 
         @include tablet {
             width: 90%;
-            padding-left: 2%;
-            padding-right: 0;
+            padding: 0 5%
         }
 
         @include desktop {
-            width: 70%;
+            width: 62%;
+            padding: 0 19%;
             bottom: 20px;
         }
 
@@ -85,7 +87,7 @@
 
                 @include tablet {
                     width: 80%;
-                    margin-top: 15px;
+                    margin-top: 14px;
                 }
             }
 

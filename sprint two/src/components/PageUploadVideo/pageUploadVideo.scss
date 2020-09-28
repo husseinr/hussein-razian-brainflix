@@ -42,6 +42,10 @@
                 @include avenirBold;
                 color: $label-color;
                 font-size: $m-label-font-size;
+
+                @include tablet {
+                    font-size: $label-font-size;
+                }
             }
     
             &-image {
@@ -74,11 +78,15 @@
                 @include avenirBold;
                 color: $label-color;
                 font-size: $m-label-font-size;
+
+                @include tablet {
+                    font-size: $label-font-size;
+                }
             }
 
             &-title {
                 @include avenirReg;
-                width: 85%;
+                width: 95%;
                 border: $box-border-color solid 1px;
                 height: 45px;
                 padding-left: 10px;
@@ -172,7 +180,8 @@
                 &-cancel {
                     color: $brainflix-blue;
                     font-size: $m-sub-font-size;
-                    width: 25%;
+                    text-align: center;
+                    width: 50%;
                     margin: 0 auto;
                 }
             }
