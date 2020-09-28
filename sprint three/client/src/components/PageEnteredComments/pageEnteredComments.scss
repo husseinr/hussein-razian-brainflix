@@ -1,0 +1,80 @@
+@import '../../styles/partials/common-styles';
+
+.comment-entries {
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: $form-section-color solid 1px;
+
+    @include tablet {
+        margin-left:3%;
+    }
+
+    @include desktop {
+        width: 83%;
+        margin-left:22%;
+    }
+
+    &__card {
+        @include commonFlex(none,row,none);
+        border-top: $form-section-color solid 1px;
+
+        &-photo {
+            background-color: $form-section-color;
+            border-radius:50%;
+            height: 45px;
+            width: 45px;
+            margin-top: 1.25em;
+            margin-right: 0.5em;
+
+            @include tablet {
+            margin-top:1.5em;
+            margin-right: 0.7em;
+            }
+        }
+
+        &-content {
+            width: 82%;
+
+            @include desktop {
+                width: 89%;
+            }
+
+            &-info {
+                @include commonFlex(none,row,none);
+                margin-top:1.5em;
+    
+                &-name {
+                    @include avenirDemi;
+                    margin:0;
+                    margin-right: 0.7em;
+                    font-size: $m-paragraph-font-size;
+
+                    @include tablet {
+                    font-size: $sub-header-font-size;
+                    }
+                }
+    
+                &-date {
+                    color: $label-color;
+                    @include avenirReg;
+                    margin:0;
+                    font-size: $m-paragraph-font-size;
+
+                    @include tablet {
+                    font-size: $sub-header-font-size;
+                    }
+                }
+            }
+
+            &-comment {
+                @include avenirReg;
+                font-size: $m-paragraph-font-size;
+                line-height: $m-paragraph-line-height;
+
+                @include tablet {
+                font-size: $paragraph-font-size;
+                }
+            }
+        }
+    }
+}

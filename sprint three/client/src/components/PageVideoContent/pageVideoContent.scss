@@ -1,0 +1,119 @@
+@import '../../styles/partials/common-styles';
+
+.content {
+        
+    &__title {
+        padding: 0 5%;
+        width: 87%;
+        margin-bottom:0;
+        @include avenirBold;
+
+        @include tablet {
+            width: 94%;
+            padding:0 3%;
+            margin-top:1.5em;
+            margin-bottom:0.75em;
+            font-size: $header2-font-size;
+        }
+
+        @include desktop {
+            width: 75%;
+            padding-left: 22%;
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__info {
+        @include commonFlex(space-between,column,none);
+        border-bottom: 1px solid $form-section-color;
+        margin-left: 5%;
+        width: 87%;
+
+        @include tablet {
+            @include commonFlex(space-between,row,none);
+            margin-left: 3%;
+            width: 94%;
+        }
+
+        @include desktop {
+            margin-left: 22%;
+            width: 83.5%;
+        }
+
+        &-channel {
+            @include commonFlex(none,row,none);
+            width: 100%;
+
+            @include tablet {
+                justify-content: none;
+                width: 27%;
+                margin: 0;
+            }
+
+            @include desktop {
+                width: 50%;
+            }
+
+            &-name {
+                @include avenirBold;
+                margin-right: 8px;
+            }
+
+            &-date {
+                @include avenirDemi;
+                color: $label-color;
+            }
+        }
+
+        &-stats{
+            @include commonFlex(none,row,none);
+            @include avenirReg;
+            width: 90%;
+
+            @include tablet {
+                width: 37%;
+            }
+
+            @include desktop {
+                width: 44%;
+            }
+            &-item{
+                @include commonFlex(none,row,none);
+                width: 8em;
+    
+                &-icon {
+                    margin-right: 8px;
+                    @include tablet {
+                        margin-left: 24px;
+                    }
+                  
+                }
+            }
+        }
+    }
+
+    &__description {
+    @include avenirReg;
+        padding: 0 5%;
+        margin: 0;
+        line-height: 1.5em;
+        font-size:$m-paragraph-font-size;
+        padding-top: 24px;
+
+        @include tablet {
+            padding: 0 3%;
+            margin-top: 40px;
+            margin-bottom: 64px;
+            font-size:$paragraph-font-size;
+            line-height: $paragraph-line-height;
+            width: 68%;
+        }
+
+        @include desktop {
+            width: 70%;
+            padding-left: 22%;
+            padding-right: 0;
+        } 
+    }
+}

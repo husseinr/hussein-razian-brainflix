@@ -1,0 +1,109 @@
+@import '../../styles/partials/common-styles';
+.nav {
+    @include avenirDemi;
+    padding: 0 5%;
+    margin: 1em 0;
+
+    @include tablet {
+        @include commonFlex(space-between,row,none);
+        padding: 2% 3%;
+    
+    }
+
+    @include desktop {
+        padding-left: 13%;
+        padding-right: 0;
+        width: 74%;
+    }
+
+    &__logo {
+        display:block;
+        margin: 0.5em auto;
+        margin-top: 0.5em;
+        width:9em;
+
+        @include tablet {
+          margin: 0;
+          margin-top: 0.5em;
+        }
+
+        @include desktop {
+            margin-right: 8em;
+        }
+    }
+
+    &-items {
+
+        @include tablet {
+            @include commonFlex(space-between,row,none);
+            width: 24em;
+        }
+
+        &__search-button {
+            width: 85%;
+            margin:0.5em 0;
+            background-image: url(../../assets/Icons/SVG/Icon-search.svg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 15px;
+            height: 45px;
+            padding-left: 40px;
+            border-radius:5px;
+            border: $box-border-color solid 1px;
+            background-color: rgb(247, 247, 247);
+    
+            @include tablet {
+                margin: 0;
+                width: 75%;
+            }
+        }
+    
+        &__user {
+            margin-top: 8px;
+            @include commonFlex(space-between,row,none);
+            width: 12em;
+
+            @include tablet {
+                margin: 0;
+                align-items: flex-end;
+            }
+    
+            &-upload {
+                @include avenirDemi;
+                width: 14em;
+                height:48px;
+                border: 0;
+                border-radius:5px;
+                color: white;
+                background-color: $brainflix-blue;
+                vertical-align: top;
+                margin-right: 0.85em;
+                font-size: 1rem;
+                background-image: url(../../assets/Icons/SVG/Icon-upload.svg);
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: 40px;
+    
+                @include tablet {
+                    margin: 0 0.5em;
+                    background-position: 10px;
+                    width: 8em;
+                    padding-left: 1em;
+                }
+            }
+    
+            &-upload:hover {
+                background-color: #0065ad;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        
+            &-photo {
+                border-radius:50%;
+                height:45px;
+                width: 45px;
+                margin-top: 1px;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import '../../styles/partials/common-styles';
+
+a{
+    text-decoration: none;
+    color: $primary-font-color;
+}
+
+.next {
+    @include avenirReg;
+    padding: 0 5%;
+
+    @include tablet {
+        padding: 0 3%;
+    }
+
+    @include desktop {
+        padding-right: 13%;
+        padding-left: 0;
+        margin-left: 3%;
+        margin-top: 1em;
+        border-left:  1px solid $form-section-color;
+    }
+
+    &__header {
+        @include avenirDemi;
+        font-size: $m-sub-header-font-size;
+        color: $label-color;
+        margin: 2.5em 0;
+
+        @include desktop {
+        padding-left: 1em;
+        }
+    }
+
+    &-video {
+        @include commonFlex (none,row,none);
+        margin-bottom:1.5em;
+
+        @include desktop {
+        padding-left: 1em;
+        }
+    
+
+        
+        &-info {
+            @include commonFlex (space-between,column,none);
+            margin-left: 1em;
+            height: 65px;
+            width: 135px;
+
+            @include tablet {
+                width: 180px;
+            }
+       
+
+            &__title {
+                @include avenirDemi;
+                margin-top: 0;
+                margin-bottom: 0.5em;
+                font-size: $m-video-title-font-size;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                @include vidTitles {
+                    white-space: normal;
+                    overflow: visible;
+                }
+            }
+
+            &__channel {
+                margin: 0;
+                font-size: $m-label-font-size;
+            }
+        }
+
+        &__photo {
+            border-radius: 3px;
+            width: 120px;
+            height: 70px;
+        }
+    }
+}
