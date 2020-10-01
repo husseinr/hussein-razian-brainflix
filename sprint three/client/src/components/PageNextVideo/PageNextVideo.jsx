@@ -4,9 +4,13 @@ import './pageNextVideo.scss';
 
 function PageNextVideo (props) {
 
+ let scroll = () =>{
+    window.scroll (0,0);
+}
+
     return (
         <div>
-            <Link to={`/${props.id}`}  className="next-video">
+            <Link to={`/${props.id}`}  className="next-video" onClick={scroll()}>
                     <img  className="next-video__photo"
                     src={props.videoImage} 
                     alt={props.videoTitle}>

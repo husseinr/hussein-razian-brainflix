@@ -9,19 +9,24 @@
         position: relative;
         height:auto;
         width: 100%;
+        
 
         &-poster {
             width: 100%;
-            height: auto;
             display: block;
+            object-fit: cover;
+            height: 56vw;
+
 
             @include tablet {
                 width: 94%;
-                padding: 0 3%
+                padding: 0 3%;
+                height: 51vw;
             }
 
             @include desktop {
                 width: 66%;
+                height: 40vw;
                 padding: 0 17%
             }
         }
@@ -97,7 +102,7 @@
 
                 @include tablet {
                     display: inline;
-                   font-size: 12px;
+                   font-size: 0.75rem;
                    margin-top: 8px;
                    padding-right: 15px;
                    margin-bottom: 0;

@@ -10,6 +10,7 @@ import './mainVideoPage.scss';
 const url ="https://project-2-api.herokuapp.com/videos/?api_key=";
 let api_key="33e84b73-0d50-49bb-aead-1fff87462673";
 
+
 class MainVideoPage extends React.Component {
   state = {
     activeVideo:[], 
@@ -21,9 +22,10 @@ class MainVideoPage extends React.Component {
     componentDidMount() {
 
       axios
-      .get (url+api_key)
+      .get ('/videos')
 
       .then(res=> {
+        console.log(JSON.stringify(res))
           this.setState({
               videos: res.data
           })
@@ -46,10 +48,11 @@ class MainVideoPage extends React.Component {
     componentDidUpdate () {
       const {match: {params}} = this.props;
       axios
-      .get (`https://project-2-api.herokuapp.com/videos/${params.id}?api_key=`+api_key)
+      .get (`/videos/${params.id}`)
       
       .then(res=> {
         if(this.state.activeVideo.id !== params.id)
+        console.log(JSON.stringify(res))
           this.setState({
               activeVideo: res.data
           })
@@ -58,8 +61,9 @@ class MainVideoPage extends React.Component {
     .catch(err=> {console.log(err)})
     }
 
-    render()
 
+
+    render()
     {
     return (
         <main>
@@ -69,7 +73,7 @@ class MainVideoPage extends React.Component {
             <div className="video-content__current">
               <PageVideoContent
                 currentVideo={this.state.activeVideo} />
-              <PageCommentsForm />
+              <PageCommentsForm currentVideo={this.state.activeVideo}/>
               <div className="comment-entries">
                 {this.state.activeVideo.comments && this.state.activeVideo.comments.map (comment => {
                     return <EnteredComments 
