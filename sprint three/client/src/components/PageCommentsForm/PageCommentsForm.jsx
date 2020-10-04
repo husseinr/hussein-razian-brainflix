@@ -6,6 +6,7 @@ function PageCommentsForm  (props) {
 
     const submit = (e) => {
         e.preventDefault();
+        e.target.reset();
     }
 
     let commentsQty = props.currentVideo.comments && props.currentVideo.comments.length;
