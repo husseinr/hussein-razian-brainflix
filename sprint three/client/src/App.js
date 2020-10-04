@@ -9,10 +9,10 @@ function App () {
   return (
     <BrowserRouter>
         <div className="App">
-          <PageHeader />
+          {/* <PageHeader /> */}
           <Switch>
             <Route path="/" exact component={MainVideoPage}/>
-            <Route path="/upload" component={PageUploadVideo}/>
+            {/* <Route path="/upload" component={PageUploadVideo}/> */}
             <Route path="/:id" component={MainVideoPage}/>
           </Switch>
         </div>

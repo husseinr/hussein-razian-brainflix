@@ -3,7 +3,7 @@ import UploadThumbnail from '../../assets/Images/Upload-video-preview.jpg'
 import './pageUploadVideo.scss';
 
 
- function PageUploadVideo() {
+ function PageUploadVideo(props) {
     return (
 
         <main className="upload">
@@ -16,25 +16,27 @@ import './pageUploadVideo.scss';
                         <img className="upload-section__thumbnail-image" src={UploadThumbnail} alt='thumbnail'/>
                     </div>
 
-                    <form className="upload-section__form">
+                    <form className="upload-section__form" onSubmit={props.addVideo}>
                         <label className="upload-section__form-label">TITLE YOUR VIDEO
-                            <input className="upload-section__form-title" name="title-input" type="text" placeholder="Add a title to your video"/>
+                            <input className="upload-section__form-title" name="title" type="text" placeholder="Add a title to your video"/>
                         </label>
             
                         <label className="upload-section__form-label">ADD A VIDEO DESCRIPTION
-                            <textarea className="upload-section__form-description" name="description-input" type="text"  placeholder="Add a description of your video"></textarea>
+                            <textarea className="upload-section__form-description" name="description" type="text"  placeholder="Add a description of your video"></textarea>
                         </label>
+
+                        <div className="upload-section__form-actions">
+                            <div className="upload-section__form-actions-items">
+                                <button className="upload-section__form-actions-items-button" type="submit">PUBLISH</button>
+                                <p className="upload-section__form-actions-items-cancel">CANCEL</p>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
-                <div className="upload-section__actions">
-                    <div className="upload-section__actions-items">
-                        <button className="upload-section__actions-items-button">PUBLISH</button>
-                        <p className="upload-section__actions-items-cancel">CANCEL</p>
-                    </div>
-                </div>
             </section>
         </main>
+
     )
 }
 
