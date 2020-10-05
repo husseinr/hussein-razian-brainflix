@@ -75,6 +75,7 @@
             border-radius:5px;
             padding-top: 10px;
             padding-left: 10px;
+            resize: none;
 
             @include tablet {
                 height: 30px;
