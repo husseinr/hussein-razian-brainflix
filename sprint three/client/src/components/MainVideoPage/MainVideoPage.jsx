@@ -58,7 +58,6 @@ class MainVideoPage extends React.Component {
       axios
         .get (`/videos/${currentVideoID}`)
         .then(res=> {
-
             this.setState({
                 activeVideo: res.data
             })

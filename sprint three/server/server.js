@@ -4,6 +4,7 @@ const port = process.env.PORT || process.argv[2] || 8080
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
+
 const videos = require ('./videos.json')
 
 app.get('/videos', (_req, res) => {
@@ -55,7 +56,9 @@ app.get('/videos', (_req, res) => {
         timestamp,
         comments
       }
+    
     ])
+    videos.push(req.body);
   })
 
 app.listen(port, () => console.log(`We're live on ${port}`))
