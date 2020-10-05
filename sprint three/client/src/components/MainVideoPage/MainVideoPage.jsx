@@ -51,27 +51,24 @@ class MainVideoPage extends React.Component {
       .catch(err=> {console.log(err)})
     }
 
-    componentDidUpdate (e) {
+    componentDidUpdate (prevProps) {
       const {match: {params}} = this.props;
-      if(this.state.activeVideo.id !== params.id) 
+      const currentVideoID = params.id ? params.id: '1af0jruup5gu'
+      if(params.id !== prevProps.match.params.id) {
       axios
-      .get (`/videos/${params.id}`)
-      .then(res=> {
+        .get (`/videos/${currentVideoID}`)
+        .then(res=> {
 
-        console.log(JSON.stringify(res))
-          this.setState({
-              activeVideo: res.data
-          })
-          window.scrollTo(0,0)
-      })
-      .catch(err=> {console.log(err + 'cannot get data :(')})
-
-      // let commentsForm = document.querySelector('.comments__form');
-      // commentsForm.reset();
+            this.setState({
+                activeVideo: res.data
+            })
+            window.scrollTo(0,0)
+          }
+        )
+        .catch(err=> {console.log(err + 'cannot get data :(')}
+        ) 
+      }
     }
-
-
-  
 
     addVideo = (e) => {
       e.preventDefault();
@@ -118,9 +115,7 @@ class MainVideoPage extends React.Component {
         this.setState({
           videos: res.data
         })
-        console.log(this.state.videos)
       })
-
       e.target.reset();
     }
 
@@ -130,7 +125,8 @@ class MainVideoPage extends React.Component {
       <>
       <PageHeader />
         <Switch>
-          <Route exact path="/upload"  render = {()=> <PageUploadVideo addVideo={this.addVideo} /> }/>
+          <Route exact path="/upload"  render = {()=> <PageUploadVideo addVideo={this.addVideo}/> }/>
+          <Route  path="/" render = {() =>
             <main>
               <PageCurrentVideo
                 currentVideo={this.state.activeVideo} />
@@ -165,7 +161,8 @@ class MainVideoPage extends React.Component {
                 </aside>
               </section>
             </main>
-          </Switch>
+          }/>
+        </Switch>
         </>
     );
   };

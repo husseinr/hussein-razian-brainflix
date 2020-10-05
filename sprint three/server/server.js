@@ -6,11 +6,6 @@ app.use(bodyParser.json())
 
 const videos = require ('./videos.json')
 
-
-app.get('/', (_req, res) => {
-    res.send('Success!')
-  })
-
 app.get('/videos', (_req, res) => {
     res.json(videos)
   })
@@ -63,4 +58,4 @@ app.get('/videos', (_req, res) => {
     ])
   })
 
-app.listen(port, () => console.log(`Listening on ${port}`))
+app.listen(port, () => console.log(`We're live on ${port}`))

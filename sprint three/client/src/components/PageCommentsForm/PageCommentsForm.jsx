@@ -8,6 +8,8 @@ function PageCommentsForm  (props) {
         e.preventDefault();
         e.target.reset();
     }
+    // let commentsForm = document.querySelector('.comments__form');
+    // commentsForm.reset();
 
     let commentsQty = props.currentVideo.comments && props.currentVideo.comments.length;
 
